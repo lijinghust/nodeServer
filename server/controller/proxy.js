@@ -70,6 +70,7 @@ const add = async function(ctx, next){
 }
 
 const del = async function(ctx, next){
+    debugger
     const params = ctx.params;
     if(!params.id){
         ctx.response.body = {
