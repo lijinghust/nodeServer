@@ -13,9 +13,10 @@ app.use(views(path.join(__dirname, './../dist/html/'), {map: {html: 'nunjucks'}}
 app.use(koaBody());
 
 app.use(routerView.routes());
-app.use(routerApi.routes());
 
 app.use(cors())
+app.use(routerApi.routes());
+
 app.use(staticServe(path.join(__dirname, './../dist/static')));
 
 app.listen(3000, function(){
